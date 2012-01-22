@@ -1,0 +1,252 @@
+@import base
+
+
+//
+// PALETTE
+//
+.palette
+    display: none
+    
+    overflow: hidden
+    position: absolute
+    
+    width: 363px
+    height: 178px
+    
+    background-color: #333333
+    border: 1px solid #595959
+    @include box-shadow(inset 0px 0px 40px rgba(#FFFFFF, 0.12), 0px 0px 0px 1px #262626)
+    
+    font-family: 'Arial', 'Helvetica', sans-serif
+    
+    input
+        position: absolute
+        top: 2px
+        right: 12px
+        
+        margin: 0px
+        padding: 2px
+        
+        width: 24px
+        height: 12px
+        
+        background-color: #1F1F1F
+        border: 1px solid #595959
+        @include box-shadow(inset 0px 0px 8px rgba(#000000, 0.3), 0px 0px 5px rgba(#FFFFFF, 0.15))
+        
+        color: #B3B3B3
+        font:
+            family: 'Arial', 'Helvetica', sans-serif
+            size: 10px
+        text:
+            align: center
+            transform: uppercase
+
+// SELECTOR
+.palette_selector
+    position: absolute
+    top: 9px
+    left: 9px
+    
+    width: 158px
+    height: 158px
+    
+    background-color: #3D3D3D
+    border: 1px solid #545454
+    @include box-shadow(inset 0px 0px 40px rgba(#FFFFFF, 0.06), 0px 0px 20px rgba(#000000, 0.25))
+    
+    &:hover
+        border-color: #666666
+    
+    & > div
+        overflow: hidden
+        position: absolute
+        top: 4px
+        left: 4px
+        
+        width: 150px
+        height: 150px
+        
+        background:
+            color: #FF0000
+            image: url('../images/palette/overlay.png')
+        
+        cursor: crosshair
+        
+    div div
+        overflow: hidden
+        position: absolute
+        top: 150px
+        left: 0px
+        
+        margin: -5px 0px 0px -5px
+        
+        width: 11px
+        height: 11px
+        
+        background: url('../images/palette/cursor.png')
+
+// HUE
+.palette_hue
+    position: absolute
+    top: 9px
+    left: 176px
+    
+    width: 39px
+    height: 160px
+    
+    &:hover div + div
+        border-color: #666666
+    
+    div + div
+        margin: 0px 6px 0px 6px
+        
+        width: 25px
+        height: 158px
+        
+        background:
+            color: #3D3D3D
+            image: url('../images/palette/hue.png')
+            position: 4px 4px
+            repeat: no-repeat
+        border: 1px solid #545454
+        @include box-shadow(inset 0px 0px 40px rgba(#FFFFFF, 0.06), 0px 0px 20px rgba(#000000, 0.25))
+        
+        cursor: n-resize
+    
+    .palette_hue_slider
+        position: absolute
+        
+        width: 39px
+        height: 11px
+        
+        background-image: url('../images/palette/hue-slider.png')
+        
+        cursor: n-resize
+
+// COLORS
+.palette_new_color, .palette_current_color
+    position: absolute
+    
+    padding: 4px
+    
+    width: 50px
+    height: 22px
+    
+    background-color: #3D3D3D
+    border: 1px solid #545454
+    @include box-shadow(inset 0px 0px 40px rgba(#FFFFFF, 0.06), 0px 0px 20px rgba(#000000, 0.25))
+    
+    div
+        width: 50px
+        height: 22px
+        
+        background-color: #FF0000
+
+.palette_new_color
+    top: 9px
+    left: 222px
+
+.palette_current_color
+    top: 9px
+    left: 294px
+    
+    &:hover
+        border-color: #666666
+
+// FIELDS
+.palette_field
+    position: absolute
+    
+    width: 58px
+    height: 22px
+    
+    background-color: #3D3D3D
+    border: 1px solid #545454
+    @include box-shadow(inset 0px 0px 40px rgba(#FFFFFF, 0.06), 0px 0px 20px rgba(#000000, 0.25))
+    
+    span
+        overflow: hidden
+        position: absolute
+        top: 0px
+        right: 0px
+        
+        width: 10px
+        height: 22px
+        
+        cursor: n-resize
+
+.palette_r
+    top: 51px
+    left: 222px
+    
+    background-image: url('../images/palette/r.png')
+
+.palette_g
+    top: 82px
+    left: 222px
+    
+    background-image: url('../images/palette/g.png')
+
+.palette_b
+    top: 112px
+    left: 222px
+    
+    background-image: url('../images/palette/b.png')
+
+.palette_h
+    top: 51px
+    left: 294px
+    
+    background-image: url('../images/palette/h.png')
+
+.palette_s
+    top: 82px
+    left: 294px
+    
+    background-image: url('../images/palette/s.png')
+
+.palette_v
+    top: 112px
+    left: 294px
+    
+    background-image: url('../images/palette/v.png')
+
+// HEX
+.palette_hex
+    position: absolute
+    top: 145px
+    left: 222px
+    
+    width: 72px
+    height: 22px
+    
+    background:
+        color: #3D3D3D
+        image: url('../images/palette/hex.png')
+    border: 1px solid #545454
+    @include box-shadow(inset 0px 0px 40px rgba(#FFFFFF, 0.06), 0px 0px 20px rgba(#000000, 0.25))
+    
+    input
+        right: 4px
+        
+        width: 45px
+
+// SUBMIT
+.palette_submit
+    overflow: hidden
+    position: absolute
+    top: 145px
+    left: 330px
+    
+    width: 22px
+    height: 22px
+    
+    background:
+        color: #3D3D3D
+        image: url('../images/palette/submit.png')
+    border: 1px solid #545454
+    @include box-shadow(inset 0px 0px 40px rgba(#FFFFFF, 0.06), 0px 0px 20px rgba(#000000, 0.25))
+    
+    &:hover
+        border-color: #666666

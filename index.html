@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="author" content="Andrew Fricke">
+    <meta name="description" content="A color palette web app that gets out of your way.">
+    <meta name="generator" content="mynt v{{ site.version }}">
+
+    <link rel="shortcut icon" href="{{ get_asset('images/favicon.ico') }}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{{ get_asset('css/screen.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ get_asset('css/colorpicker.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ get_asset('css/palette.css') }}" type="text/css">
+    
+    <script src="{{ get_asset('js/parse-color.min.js') }}" type="text/javascript"></script>
+    <script src="{{ get_asset('js/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ get_asset('js/jquery-ui.min.js') }}" type="text/javascript"></script>
+    <script src="{{ get_asset('js/jquery.palette.min.js') }}" type="text/javascript"></script>
+    <script src="{{ get_asset('js/jquery.cookie.js') }}" type="text/javascript"></script>
+    <script src="{{ get_asset('js/palette.min.js') }}" type="text/javascript"></script>
+    
+    <title>Palette - The color palette web app that gets out of your way.</title>
+</head>
+
+<body>
+    <noscript>
+        <div id="noscript">
+            <p>JavaScript is required to use this site</p>
+        </div>
+    </noscript>
+    
+    <div id="panel">
+        <ul>
+            <li id="dark">dark</li>
+            <li id="light">light</li>
+            
+            <li id="smaller">smaller</li>
+            <li id="larger">larger</li>
+            
+            <li id="reset">reset</li>
+            <li id="colors">colors</li>
+            <li id="size">size</li>
+        </ul>
+        
+        <div>
+            <p><strong>esc</strong> close the color picker</p>
+            <p><strong>shift+3</strong> show the color picker for the color under the mouse cursor with the hex field selected</p>
+            <p><strong>up</strong> and <strong>down</strong> in the RGB and HSV fields to increment or decrement the value</p>
+        </div>
+        
+        <div>
+            <p>drag a color's label to another color to copy</p>
+            <p>drag a color to rearrange</p>
+            <p>click the icon in the upper right of a color to copy the hex value to clipboard</p>
+        </div>
+        
+        <ul id="resources">
+            <li id="donate"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=donate%40mirroredwhite%2ecom&amp;lc=US&amp;item_name=MirroredWhite&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted">donate</a></li>
+            <li id="source"><a href="https://github.com/Anomareh/Palette">source</a></li>
+        </ul>
+    </div>
+    
+    <div id="palette">
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+    </div>
+</body>
+</html>

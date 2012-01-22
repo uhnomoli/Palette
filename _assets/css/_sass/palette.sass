@@ -1,0 +1,216 @@
+@import base
+
+
+//
+// PALETTE
+//
+.palette
+    display: none
+    
+    overflow: hidden
+    position: absolute
+    
+    width: 367px
+    height: 182px
+    
+    background:
+        color: #333333
+        image: url('../images/palette/palette.png')
+        position: left top
+        repeat: no-repeat
+    
+    font-family: 'Arial', 'Helvetica', sans-serif
+    
+    input
+        position: absolute
+        top: 3px
+        right: 15px
+        
+        margin: 0px
+        padding: 2px
+        
+        width: 24px
+        height: 12px
+        
+        background-color: transparent
+        border: 0px solid transparent
+        
+        color: #B3B3B3
+        font:
+            family: 'Arial', 'Helvetica', sans-serif
+            size: 10px
+        text:
+            align: center
+            transform: uppercase
+
+// SELECTOR
+.palette_selector
+    position: absolute
+    top: 11px
+    left: 11px
+    
+    width: 158px
+    height: 158px
+    
+    border: 1px solid transparent
+    
+    &:hover
+        border-color: #666666
+    
+    & > div
+        overflow: hidden
+        position: absolute
+        top: 4px
+        left: 4px
+        
+        width: 150px
+        height: 150px
+        
+        background:
+            color: #FF0000
+            image: url('../images/palette/overlay.png')
+        
+        cursor: crosshair
+        
+    div div
+        overflow: hidden
+        position: absolute
+        top: 150px
+        left: 0px
+        
+        margin: -5px 0px 0px -5px
+        
+        width: 11px
+        height: 11px
+        
+        background: url('../images/palette/cursor.png')
+
+// HUE
+.palette_hue
+    position: absolute
+    top: 11px
+    left: 178px
+    
+    width: 39px
+    height: 160px
+    
+    &:hover div + div
+        border-color: #666666
+    
+    div + div
+        margin: 0px 6px 0px 6px
+        
+        width: 25px
+        height: 158px
+        
+        border: 1px solid transparent
+        
+        cursor: n-resize
+    
+    .palette_hue_slider
+        position: absolute
+        
+        width: 39px
+        height: 11px
+        
+        background-image: url('../images/palette/hue-slider.png')
+        
+        cursor: n-resize
+
+// COLORS
+.palette_new_color, .palette_current_color
+    position: absolute
+    top: 11px
+    
+    padding: 4px
+    
+    width: 50px
+    height: 22px
+    
+    border: 1px solid transparent
+    
+    div
+        width: 50px
+        height: 22px
+        
+        background-color: #FF0000
+
+.palette_new_color
+    left: 224px
+
+.palette_current_color
+    left: 296px
+    
+    &:hover
+        border-color: #666666
+
+// FIELDS
+.palette_field
+    position: absolute
+    
+    width: 60px
+    height: 24px
+    
+    span
+        overflow: hidden
+        position: absolute
+        top: 0px
+        right: 0px
+        
+        width: 10px
+        height: 22px
+        
+        cursor: n-resize
+
+.palette_r
+    top: 54px
+    left: 225px
+
+.palette_g
+    top: 85px
+    left: 225px
+
+.palette_b
+    top: 115px
+    left: 225px
+
+.palette_h
+    top: 54px
+    left: 297px
+
+.palette_s
+    top: 85px
+    left: 297px
+
+.palette_v
+    top: 115px
+    left: 297px
+
+// HEX
+.palette_hex
+    position: absolute
+    top: 148px
+    left: 225px
+    
+    width: 74px
+    height: 24px
+    
+    input
+        right: 7px
+        
+        width: 45px
+
+// SUBMIT
+.palette_submit
+    overflow: hidden
+    position: absolute
+    top: 147px
+    left: 332px
+    
+    width: 22px
+    height: 22px
+    
+    border: 1px solid transparent
+    
+    &:hover
+        border-color: #666666

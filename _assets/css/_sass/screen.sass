@@ -1,0 +1,265 @@
+@import base
+
+
+//
+// RESET
+//
+*
+    margin: 0px
+    padding: 0px
+    
+    border-width: 0px
+    outline: invert none 0px
+
+
+//
+// BASE ELEMENTS
+//
+body
+    background:
+        color: #272727
+        image: url('../images/bg-dark.png')
+        position: left top
+        repeat: repeat
+    
+    color: #E6E6E6
+    font:
+        family: 'Arial', 'Helvetica', sans-serif
+        size: 10px
+    text-transform: uppercase
+    
+    &.light
+        background:
+            color: #F2F2F2
+            image: url('../images/bg-light.png')
+        
+        color: #262626
+
+h1, h2, h3, h4, h5, h6
+    font:
+        size: 1em
+        style: normal
+        weight: normal
+
+h3
+    display: inline-block
+    
+    padding-bottom: 2px
+    
+    border-bottom: 1px dotted #333333
+    
+    font:
+        size: 10px
+        weight: bold
+    
+    p + &
+        margin-top: 10px
+    
+    body.light &
+        border-bottom-color: #808080
+
+p
+    margin: 5px 0px 5px 5px
+
+li
+    float: left
+    
+    margin: 3px 0px 3px 8px
+    padding: 4px 8px 4px 8px
+    
+    background-color: #141414
+    @include border-radius(2px)
+    @include box-shadow(0px 0px 8px rgba(#000000, 0.25))
+    cursor: pointer
+    
+    &:hover
+        color: #CC4747
+    
+    body.light &
+        background-color: #BFBFBF
+        @include box-shadow(inset 0px 0px 40px rgba(#000000, 0.1), 0px 0px 8px rgba(#000000, 0.1))
+        
+        &:hover
+            color: #AC2B2B
+    
+    a
+        display: block
+        
+        padding: 4px 8px 4px 8px
+
+ul
+    overflow: hidden
+    
+    list-style:
+        image: none
+        type: none
+
+a:link, a:visited, a:active
+    color: #E6E6E6
+    text-decoration: none
+    
+    body.light &
+        color: #262626
+
+a:hover
+    color: #CC4747
+    
+    body.light &
+        color: #AC2B2B
+
+strong
+    color: #CC4747
+    font-weight: bold
+    
+    body.light &
+        color: #AC2B2B
+
+
+//
+// EVERYTHING ELSE
+//
+
+// PANEL
+#panel
+    position: absolute
+    top: 75px
+    bottom: 0px
+    left: 0px
+    
+    width: 300px
+    
+    div
+        margin-top: 10px
+        padding: 4px 8px 4px 8px
+        
+        background-color: #141414
+        @include border-radius(2px, 'top-right')
+        @include border-radius(2px, 'bottom-right')
+        @include box-shadow(0px 0px 8px rgba(#000000, 0.25))
+    
+    #dark, #smaller, #reset, #donate
+        margin-left: 0px
+        
+        @include border-radius(0px, 'top-left')
+        @include border-radius(0px, 'bottom-left')
+    
+    #smaller, #reset
+        clear: left
+    
+    #resources
+        position: absolute
+        bottom: 10px
+        
+        li
+            padding: 0px
+    
+    body.light &
+        div
+            background-color: #BFBFBF
+            @include box-shadow(inset 0px 0px 40px rgba(#000000, 0.1), 0px 0px 8px rgba(#000000, 0.1))
+
+// PALETTE
+#palette
+    overflow: hidden
+    
+    margin: 75px auto 25px auto
+    padding: 4px
+    
+    width: 900px
+    height: 600px
+    
+    background-color: #3D3D3D
+    border: 1px solid #545454
+    @include box-shadow(inset 0px 0px 40px rgba(#FFFFFF, 0.06), 0px 0px 20px rgba(#000000, 0.25))
+    
+    div
+        float: left
+        
+        position: relative
+        
+        width: 150px
+        height: 150px
+        
+        &:hover
+            p, .clippy
+                @include opacity(1)
+    
+    p
+        position: absolute
+        top: 9px
+        left: 9px
+        
+        margin: 0px
+        padding: 2px 4px 2px 4px
+        
+        background-color: #1A1A1A
+        @include border-radius(2px)
+        @include box-shadow(0px 0px 8px rgba(#000000, 0.55))
+        cursor: pointer
+        @include opacity(0)
+        
+        color: #E6E6E6
+        
+        @include transition(all 0.5s)
+        
+        &.ui-draggable-dragging
+            z-index: 1
+            
+            @include opacity(1)
+            
+            @include transition(none)
+    
+    .clippy
+        position: absolute
+        top: 9px
+        right: 9px
+        overflow: hidden
+        
+        padding: 2px 0px 0px 2px
+        
+        width: 16px
+        height: 16px
+        
+        background-color: #1A1A1A
+        @include border-radius(2px)
+        @include box-shadow(0px 0px 8px rgba(#000000, 0.55))
+        @include opacity(0)
+        
+        @include transition(all 0.5s)
+    
+    .highlight
+        @include box-shadow(inset 0px 0px 25px rgba(#000000, 0.25), inset 0px 0px 0px 2px rgba(#141414, 0.5))
+    
+    .light
+        div, p
+            background-color: #CCCCCC
+            @include box-shadow(0px 0px 8px rgba(#FFFFFF, 0.25))
+            
+            color: #262626
+    
+    body.light &
+        background-color: #808080
+        border: 1px solid #787878
+
+// NOSCRIPT
+#noscript
+    position: absolute
+    top: 0px
+    right: 0px
+    bottom: 0px
+    left: 0px
+    z-index: 1
+    
+    background:
+        image: url('../images/75.png')
+        position: left top
+        repeat: repeat
+    
+    p
+        margin-top: 350px
+        
+        color: #CC4747
+        font:
+            size: 15px
+            weight: bold
+        text-align: center

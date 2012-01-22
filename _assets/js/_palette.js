@@ -1,7 +1,7 @@
 function clippy(color) {
     var bg = (color.luma <= 0.25) ? 'CCCCCC' : '1A1A1A';
     
-    return '<div class="clippy"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="110" height="14" id="clippy"><param name="movie" value="/palette/assets/flash/clippy.swf"><param name="allowScriptAccess" value="always"><param name="quality" value="high"><param name="scale" value="noscale"><param name="FlashVars" value="text=' + color.hex + '"><param name="bgcolor" value="#' + bg + '"><param name="wmode" value="opaque"><embed src="/palette/assets/flash/clippy.swf" width="110" height="14" name="clippy" quality="high" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" FlashVars="text=' + color.hex + '" bgcolor="#' + bg + '" wmode="opaque"></object></div>';
+    return '<div class="clippy"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="110" height="14" id="clippy"><param name="movie" value="/assets/flash/clippy.swf"><param name="allowScriptAccess" value="always"><param name="quality" value="high"><param name="scale" value="noscale"><param name="FlashVars" value="text=' + color.hex + '"><param name="bgcolor" value="#' + bg + '"><param name="wmode" value="opaque"><embed src="/palette/assets/flash/clippy.swf" width="110" height="14" name="clippy" quality="high" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" FlashVars="text=' + color.hex + '" bgcolor="#' + bg + '" wmode="opaque"></object></div>';
 }
 
 function hsv_to_object(string) {

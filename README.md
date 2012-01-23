@@ -12,6 +12,6 @@ Palette accomplishes this in several ways.
 + Drag and drop the label in the top left of any color to copy.
 + Click the button in the top right of any color to copy it's hex value to clipboard.
 + Hit a keybind while hovering over any color to open it's picker with the hex field selected.
-+ Close and refresh protection by saving the picker's data in a cookie that automatically gets restored.
++ Close and refresh protection by saving the palette's data in a cookie that automatically gets restored.
 
 All of the above combine to give you a friendly, simple, lightweight, color palette app that gets out of your way.
